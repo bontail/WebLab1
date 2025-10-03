@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Point Checker</title>
+    <script defer src="bundle.js"></script>
+  </head>
+  <body>
+    <div id="toast-container"></div>
+    <table class="main-table">
+      <tr>
+        <td colspan="3" class="center-cell">
+          <h1 class="header-title">Лабораторная</h1>
+          <p class="header-info">ФИО: Торбин Илья Александрович</p>
+          <p class="header-info">Группа: P3215</p>
+          <p class="header-info">Вариант: 467740</p>
+        </td>
+      </tr>
+      <tr>
+        <td class="graph-cell">
+          <canvas
+            id="graph-canvas"
+            width="520"
+            height="520"
+            aria-label="График"
+          ></canvas>
+        </td>
+        <td class="result-cell">
+          <div id="result">
+            <h2 class="result-title">Результаты</h2>
+            <img
+              id="logo-img"
+              alt="Логотип ВТ"
+              class="logo"
+              width="50"
+              height="50"
+              style="margin-left: 350px"
+            />
+            <table id="results-table">
+              <thead>
+                <tr>
+                  <th>X</th>
+                  <th>Y</th>
+                  <th>R</th>
+                  <th>Попадание</th>
+                  <th>Время</th>
+                  <th>Время выполнения</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <form id="point-form" method="POST" autocomplete="off">
+            <table class="form-table">
+              <tr>
+                <td><label>X:</label></td>
+                <td>
+                  <div class="checkbox-group">
+                    <input
+                      type="checkbox"
+                      name="x"
+                      value="-4"
+                      class="x-checkbox"
+                      data-x="-4"
+                    />-4
+                    <input
+                      type="checkbox"
+                      name="x"
+                      value="-3"
+                      class="x-checkbox"
+                      data-x="-3"
+                    />-3
+                    <input
+                      type="checkbox"
+                      name="x"
+                      value="-2"
+                      class="x-checkbox"
+                      data-x="-2"
+                    />-2
+                    <input
+                      type="checkbox"
+                      name="x"
+                      value="-1"
+                      class="x-checkbox"
+                      data-x="-1"
+                    />-1
+                    <input
+                      type="checkbox"
+                      name="x"
+                      value="0"
+                      class="x-checkbox"
+                      data-x="0"
+                    />0
+                    <input
+                      type="checkbox"
+                      name="x"
+                      value="1"
+                      class="x-checkbox"
+                      data-x="1"
+                    />1
+                    <input
+                      type="checkbox"
+                      name="x"
+                      value="2"
+                      class="x-checkbox"
+                      data-x="2"
+                    />2
+                    <input
+                      type="checkbox"
+                      name="x"
+                      value="3"
+                      class="x-checkbox"
+                      data-x="3"
+                    />3
+                    <input
+                      type="checkbox"
+                      name="x"
+                      value="4"
+                      class="x-checkbox"
+                      data-x="4"
+                    />4
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="y">Y:</label></td>
+                <td>
+                  <input
+                    type="text"
+                    id="y"
+                    name="y"
+                    required
+                    class="input-text"
+                    data-input="y"
+                    pattern="^\s*-?\d+(\.(\d+)?)?$"
+                    maxlength="8"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label>R:</label></td>
+                <td>
+                  <div class="radio-group">
+                    <input
+                      type="radio"
+                      name="r"
+                      value="1"
+                      required
+                      class="r-radio"
+                      data-r="1"
+                    />1
+                    <input
+                      type="radio"
+                      name="r"
+                      value="2"
+                      class="r-radio"
+                      data-r="2"
+                    />2
+                    <input
+                      type="radio"
+                      name="r"
+                      value="3"
+                      class="r-radio"
+                      data-r="3"
+                    />3
+                    <input
+                      type="radio"
+                      name="r"
+                      value="4"
+                      class="r-radio"
+                      data-r="4"
+                    />4
+                    <input
+                      type="radio"
+                      name="r"
+                      value="5"
+                      class="r-radio"
+                      data-r="5"
+                    />5
+                  </div>
+                </td>
+              </tr>
+            </table>
+            <button type="submit" class="submit-btn">Проверить</button>
+          </form>
+        </td>
+      </tr>
+      <tr align="center">
+        <td colspan="2" class="bottom-cell"></td>
+      </tr>
+    </table>
+  </body>
+</html>
